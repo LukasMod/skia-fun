@@ -1,9 +1,7 @@
 import { StyleSheet, useWindowDimensions } from "react-native"
 
-import EditScreenInfo from "../../components/EditScreenInfo"
-import { Text, View } from "../../components/Themed"
-import { HelloWorld } from "../../examples/helloWorld/HelloWorld"
-import { Spinner } from "../../examples/Spinner"
+import { View } from "../../components/Themed"
+import { Spinner } from "../../examples/Spinner/Spinner"
 
 export default function TabOneScreen() {
   const spinners = new Array(15).fill(1)
@@ -14,7 +12,6 @@ export default function TabOneScreen() {
 
   return (
     <View style={styles.container}>
-      {/* <HelloWorld /> */}
       <View
         style={{
           flex: 1,
@@ -43,7 +40,6 @@ export default function TabOneScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: "rgba(123,231,24,0.2)",
   },
 })
 

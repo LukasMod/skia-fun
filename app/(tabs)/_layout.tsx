@@ -46,16 +46,23 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="helloWorld"
+        name="triangle"
         options={{
-          title: "Tab HelloWorld",
+          title: "Triangle",
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
       <Tabs.Screen
         name="spinner"
         options={{
-          title: "Tab Spinner",
+          title: "Spinner",
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="coin"
+        options={{
+          title: "Coin",
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />

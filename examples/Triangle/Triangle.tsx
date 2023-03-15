@@ -1,4 +1,5 @@
 import {
+  BlurMask,
   Canvas,
   Circle,
   Group,
@@ -19,7 +20,6 @@ import {
 } from "react-native-reanimated"
 
 export const HelloWorld = () => {
-
   const size = 360
   const r = size * 0.33
   //   const r = 110
@@ -59,7 +59,7 @@ export const HelloWorld = () => {
           blendMode="hardLight"
           // origin={{ x: 0, y: 50 }}
           // transform={[{ skewX: Math.PI / 6 }]}
-          //   clip={path}
+          clip={path}
           transform={
             [
               // { rotate: animRotate.current },
@@ -92,6 +92,7 @@ export const HelloWorld = () => {
             />
           </Circle>
         </Group>
+        <BlurMask blur={50} style="normal" />
       </Canvas>
     </>
   )
