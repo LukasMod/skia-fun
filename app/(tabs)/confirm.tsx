@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native"
 import { View } from "../../components/Themed"
 import ConfirmButton from "../../examples/ConfirmButton/ConfirmButton"
 
-export default function TabOneScreen() {
+export default function ConfirmScreen() {
   const font = useFont(require("../../assets/fonts/bold.ttf"), 20)
 
   return (

@@ -6,7 +6,7 @@ import ConfirmButtonContent, {
   ConfirmButtonContentProps,
 } from "./ConfirmButtonContent"
 
-type ConfirmButtonProps = ConfirmButtonContentProps & {
+type ConfirmButtonProps = Omit<ConfirmButtonContentProps, "size"> & {
   style?: StyleProp<ViewStyle>
 }
 
