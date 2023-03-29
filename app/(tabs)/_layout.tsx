@@ -24,6 +24,13 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
+        name="meatball"
+        options={{
+          title: "Meatball",
+          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        }}
+      />
+      <Tabs.Screen
         name="confirm"
         options={{
           title: "Confirm",

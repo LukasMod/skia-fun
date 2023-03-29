@@ -4,7 +4,7 @@ import { View } from "../../components/Themed"
 import { Spinner } from "../../examples/Spinner/Spinner"
 
 export default function TabOneScreen() {
-  const spinners = new Array(15).fill(1)
+  const spinners = new Array(3).fill(1)
 
   const SCREEN_WIDTH = useWindowDimensions().width
 
