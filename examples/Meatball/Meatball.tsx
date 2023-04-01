@@ -40,7 +40,7 @@ function getRandomInteger(min: number, max: number) {
 const RADIUS = 30
 const width = Dimensions.get("screen").width
 const height = Dimensions.get("screen").height
-const arenaHeight = height * 0.5
+const arenaHeight = height * 0.6
 
 const RADIUS_GESTURE = 25
 const BLUR = 7
@@ -75,7 +75,7 @@ export default function Meatball({}) {
 
   const startCoords = {
     x: (width + RADIUS) / 2,
-    y: arenaHeight * 1.4,
+    y: height * 0.8 - 2 * RADIUS,
   }
 
   const firstCx = useValue(startCoords.x)
@@ -126,7 +126,7 @@ export default function Meatball({}) {
     y: number
   }>({
     onStart: (_, context) => {
-      if (context.y < height - arenaHeight) {
+      if (context.y < arenaHeight) {
         return
       }
 
@@ -134,22 +134,18 @@ export default function Meatball({}) {
       context.y = firstCy.current
     },
     onActive: ({ translationX, translationY, x, y }, context) => {
-      if (context.y < height - arenaHeight) {
+      if (context.y < arenaHeight) {
         return
       }
 
       firstCx.current = context.x + translationX
-      firstCy.current = clamp(
-        context.y + translationY,
-        height - arenaHeight,
-        height
-      )
+      firstCy.current = clamp(context.y + translationY, arenaHeight, height)
     },
     onEnd: (
       { translationX, translationY, velocityX, velocityY, x, y },
       context
     ) => {
-      if (context.y < height - arenaHeight) {
+      if (context.y < arenaHeight) {
         onPressReset()
         context.y = startCoords.y
         return
